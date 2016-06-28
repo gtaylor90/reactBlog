@@ -19697,21 +19697,39 @@ var React = require('react'),
     ReactDOM = require('react-dom');
 
 var app = function app() {
-	var _this = this;
+    var _this = this;
 
-	var Header = React.createClass({
-		displayName: 'Header',
+    var Header = React.createClass({
+        displayName: 'Header',
 
-		render: function render() {
-			return React.createElement('h1', {
-				__self: _this
-			}, 'YOLO');
-		}
-	});
+        render: function render() {
+            return React.createElement('div', { id: 'container', __self: _this
+            }, React.createElement('div', { id: 'sky', __self: _this
+            }, React.createElement('img', { src: 'http://magentanova.github.io/html-intro-1/images/houston.jpg', alt: 'none', __self: _this
+            }), React.createElement('div', { id: 'logo', __self: _this
+            })), React.createElement('div', { id: 'column', __self: _this
+            }, React.createElement('div', { id: 'lcol', __self: _this
+            }, React.createElement('h1', {
+                __self: _this
+            }, 'The Iron Yard | Houston'), React.createElement('p', {
+                __self: _this
+            }, ' Happenings and updates from The Iron Yard in Houston, TX'), React.createElement('h2', {
+                __self: _this
+            }, 'SEARCH'), React.createElement('form', {
+                __self: _this
+            }, React.createElement('input', { type: 'text', placeholder: 'search', __self: _this
+            }))), React.createElement('div', { id: 'rcol', __self: _this
+            }, React.createElement('h1', {
+                __self: _this
+            }, 'September 22 Stars a New Class of The Iron Yard Houston Students'), React.createElement('img', { src: 'http://magentanova.github.io/html-intro-1/images/classroom.jpg', alt: '', __self: _this
+            }))), React.createElement('div', { id: 'social', __self: _this
+            }));
+        }
+    });
 
-	ReactDOM.render(React.createElement(Header, {
-		__self: this
-	}), document.querySelector('.container'));
+    ReactDOM.render(React.createElement(Header, {
+        __self: this
+    }), document.querySelector('.container'));
 };
 
 app();
